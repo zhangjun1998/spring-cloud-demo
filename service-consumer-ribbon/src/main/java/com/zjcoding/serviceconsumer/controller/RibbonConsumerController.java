@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 暂无描述
+ * Ribbon，集成RestTemplate，@LoadBalanced注解声明客户端负载均衡
  *
  * @author ZhangJun
  * @date 16:32 2020/10/24
