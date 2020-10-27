@@ -18,6 +18,14 @@ public class RibbonConsumerController {
     @Autowired
     private RibbonConsumerService consumerService;
 
+    /**
+     * 问题：映射路径为什么不能和其它服务路径相同
+     *
+     * @author ZhangJun
+     * @date 11:23 2020/10/27
+     * @Param []
+     * @return java.lang.String
+     */
     @GetMapping("/getPort")
     public String getPort(){
         return consumerService.getPort();
