@@ -21,7 +21,7 @@ public class FeignConsumerController {
     @Autowired
     ProviderService providerService;
 
-    @GetMapping("/getProviderPort")
+    @GetMapping("/getPort")
     public String getport(){
         return providerService.getPort();
     }

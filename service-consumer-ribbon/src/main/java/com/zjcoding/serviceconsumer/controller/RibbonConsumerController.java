@@ -1,5 +1,10 @@
 package com.zjcoding.serviceconsumer.controller;
 
+import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.AbstractLoadBalancerRule;
+import com.netflix.loadbalancer.ILoadBalancer;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.Server;
 import com.zjcoding.serviceconsumer.service.RibbonConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +35,5 @@ public class RibbonConsumerController {
     public String getPort(){
         return consumerService.getPort();
     }
-
 
 }
