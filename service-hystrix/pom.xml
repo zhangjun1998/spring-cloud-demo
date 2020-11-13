@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<artifactId>spring-cloud-demo</artifactId>
 		<groupId>com.zjcoding</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>service-consumer-feign</artifactId>
+	<artifactId>service-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>service-consumer-feign</name>
-	<description>Demo project for Spring Boot</description>
+	<name>service-hystrix</name>
+	<description>Demo project for hystrix</description>
 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+		<!--Hystrix依赖-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+
+		<!--Hystrix监控-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--Hystrix监控面板-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		</dependency>
+
+		<!--聚合监控-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+		</dependency>
+
+		<!--Feign依赖，默认集成Ribbon、Hystrix，但是没有集成Hystrix监控端点-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 
 	</dependencies>
